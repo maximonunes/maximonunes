@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cidade - Multimédia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .fotografias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .fotografias img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .poema {
+        max-width: 400px;
+        margin-top: 10px;
+        font-style: italic;
+      }
+
+      .poema p:nth-child(odd) {
+        color: #2f4f3f;
+      }
+
+      .poema p:nth-child(even) {
+        color: #a0522d;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sintra</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="local.html">Localização</a>
+      <a href="multimedia.html">Multimédia</a>
+      <a href="info.html">Informações</a>
+    </nav>
+
+    <main>
+      <h2>Multimédia</h2>
+      <p>
+        Nesta página junto fotografias, um vídeo e um poema sobre Sintra:
+        <a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> |
+        <a href="#poesia">Poesia</a>
+      </p>
+
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="imagens/palacio-pena.jpg" alt="Palácio Nacional da Pena" />
+          <img src="imagens/castelo-mouros.jpg" alt="Castelo dos Mouros" />
+          <img src="imagens/quinta-regaleira.jpg" alt="Quinta da Regaleira" />
+          <img
+            src="imagens/palacio-sintra.jpg"
+            alt="Palácio Nacional de Sintra"
+          />
+          <img
+            src="imagens/palacio-monserrate.jpg"
+            alt="Palácio de Monserrate"
+          />
+          <img src="imagens/palacio-seteais.jpg" alt="Palácio de Seteais" />
+          <img src="imagens/azenhas-do-mar.jpg" alt="Azenhas do Mar" />
+          <img src="imagens/praia-da-ursa.jpg" alt="Praia da Ursa" />
+        </div>
+      </section>
+
+      <section>
+        <h3 id="video">Vídeo</h3>
+        <!--
+          Substitui o iframe abaixo pelo código de incorporação do vídeo
+          que escolheste no YouTube (Partilhar > Incorporar).
+        -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/COLOCA_AQUI_O_ID_DO_VIDEO"
+          title="Vídeo sobre Sintra"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section>
+        <h3 id="poesia">Poesia</h3>
+        <div class="poema">
+          <p>Névoa que abraça a serra ao amanhecer,</p>
+          <p>torres de conto guardando o poder.</p>
+          <p>Jardins em segredo, fontes a cantar,</p>
+          <p>Sintra é sonho que ninguém quer acordar.</p>
+          <p>Pedra mourisca, palácio real,</p>
+          <p>história e magia em cada portal.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+  </body>
+</html>
