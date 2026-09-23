@@ -6,11 +6,6 @@ body {
   color: #333;
 }
 
-.map-frame,
-.video-frame {
-  border: 0;
-}
-
 header {
   background-color: #2f4f3f;
   color: #fff;
