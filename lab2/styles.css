@@ -3,12 +3,17 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f1ea;
-  color: #333333;
+  color: #333;
+}
+
+.map-frame,
+.video-frame {
+  border: 0;
 }
 
 header {
   background-color: #2f4f3f;
-  color: #ffffff;
+  color: #fff;
   padding: 20px;
   text-align: center;
 }
@@ -20,7 +25,7 @@ nav {
 }
 
 nav a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   margin: 0 12px;
   font-weight: bold;
@@ -37,7 +42,7 @@ main {
 
 footer {
   background-color: #2f4f3f;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 12px;
 }
@@ -53,7 +58,7 @@ table {
 
 th,
 td {
-  border: 1px solid #999999;
+  border: 1px solid #999;
   padding: 8px 14px;
   text-align: left;
 }
