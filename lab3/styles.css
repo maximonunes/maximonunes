@@ -16,7 +16,9 @@ header {
 nav {
   background-color: #3f6a52;
   padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -60,4 +62,138 @@ td {
 
 th {
   background-color: #e2e8e0;
+}
+
+/* ---------- Página Localização: texto ao lado do mapa ---------- */
+.local-conteudo {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.local-conteudo p {
+  flex: 1;
+  margin: 0;
+}
+
+.map-frame {
+  flex: 1;
+  min-width: 0;
+  height: 450px;
+  border: 0;
+}
+
+/* ---------- Página Informações: display grid ---------- */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "intro  intro  foto1 foto1"
+    "tabela tabela foto1 foto1"
+    ".      foto2  foto2 ."
+    "lista  lista  foto3 foto3"
+    "lista  lista  foto3 foto3";
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.info-intro {
+  grid-area: intro;
+}
+
+.info-tabela {
+  grid-area: tabela;
+  overflow-x: auto;
+}
+
+.info-lista {
+  grid-area: lista;
+}
+
+.info-grid img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.foto1 {
+  grid-area: foto1;
+  height: 320px;
+}
+
+.foto2 {
+  grid-area: foto2;
+  height: 150px;
+}
+
+.foto3 {
+  grid-area: foto3;
+  height: 260px;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 700px) {
+  main {
+    padding: 20px;
+  }
+
+  /* menu passa a barra de separadores fixa no fundo do ecrã */
+  body {
+    padding-bottom: 56px;
+  }
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    z-index: 100;
+  }
+
+  nav a {
+    flex: 1;
+    margin: 0;
+    padding: 18px 4px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 3px solid transparent;
+  }
+
+  nav a:hover {
+    text-decoration: none;
+    border-top-color: #fff;
+    background-color: #2f4f3f;
+  }
+
+  /* localização: texto por cima do mapa */
+  .local-conteudo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .local-conteudo p {
+    flex: none;
+  }
+
+  .map-frame {
+    flex: none;
+    width: 100%;
+    height: 350px;
+  }
+
+  /* informações: uma coluna */
+  .info-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "foto1"
+      "tabela"
+      "foto2"
+      "lista"
+      "foto3";
+  }
 }

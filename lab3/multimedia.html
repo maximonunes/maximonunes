@@ -6,6 +6,35 @@
     <title>Cidade - Multimédia</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+      main.sem-margem {
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      .intro {
+        padding: 20px 40px;
+      }
+
+      /* secções com o tamanho do ecrã e fundos diferentes */
+      .tela {
+        min-height: 100vh;
+        padding: 40px;
+        box-sizing: border-box;
+      }
+
+      .fundo-fotos {
+        background-color: #f4f1ea;
+      }
+
+      .fundo-video {
+        background-color: #dce8e0;
+      }
+
+      .fundo-poesia {
+        background-color: #f3e5d0;
+      }
+
+      /* ---- Fotografias com transição ---- */
       .fotografias {
         display: flex;
         flex-wrap: wrap;
@@ -19,12 +48,47 @@
         object-fit: cover;
         border-radius: 4px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
       }
 
+      .fotografias img:hover {
+        transform: scale(1.25);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      /* ---- Fotografia emblemática com frase ---- */
+      .destaque {
+        position: relative;
+      }
+
+      .destaque img {
+        width: 100%;
+        display: block;
+      }
+
+      .frase {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        max-width: 60%;
+        margin: 0;
+        font-size: 5vw;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      /* ---- Vídeo YouTube ---- */
       .video-frame {
         border: 0;
+        width: 100%;
+        max-width: 560px;
+        aspect-ratio: 16 / 9;
       }
 
+      /* ---- Poema ---- */
       .poema {
         max-width: 400px;
         margin-top: 10px;
@@ -38,6 +102,45 @@
       .poema p:nth-child(even) {
         color: #a0522d;
         margin-left: 20px;
+      }
+
+      /* ---- Vídeo de fundo ---- */
+      .video-fundo {
+        position: relative;
+        overflow: hidden;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .video-fundo video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .video-fundo .conteudo {
+        position: relative;
+        text-align: center;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      }
+
+      /* ---- Parallax ---- */
+      .parallax {
+        background-image: url("images/castelo_dos_mouros.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
       }
     </style>
   </head>
@@ -53,15 +156,17 @@
       <a href="info.html">Informações</a>
     </nav>
 
-    <main>
-      <h2>Multimédia</h2>
-      <p>
-        Nesta página junto fotografias, um vídeo e um poema sobre Sintra:
-        <a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> |
-        <a href="#poesia">Poesia</a>
-      </p>
+    <main class="sem-margem">
+      <section class="intro">
+        <h2>Multimédia</h2>
+        <p>
+          Nesta página junto fotografias, vídeos e um poema sobre Sintra:
+          <a href="#fotografias">Fotografias</a> | <a href="#video">Vídeo</a> |
+          <a href="#poesia">Poesia</a>
+        </p>
+      </section>
 
-      <section>
+      <section class="tela fundo-fotos">
         <h3 id="fotografias">Fotografias</h3>
         <div class="fotografias">
           <img src="images/palacio_pena.jpg" alt="Palácio Nacional da Pena" />
@@ -78,7 +183,12 @@
         </div>
       </section>
 
-      <section>
+      <section class="destaque">
+        <img src="images/palacio_pena.jpg" alt="Palácio Nacional da Pena" />
+        <p class="frase">Sintra, onde a névoa guarda os sonhos.</p>
+      </section>
+
+      <section class="tela fundo-video">
         <h3 id="video">Vídeo</h3>
         <iframe
           class="video-frame"
@@ -99,7 +209,7 @@
         ></iframe>
       </section>
 
-      <section>
+      <section class="tela fundo-poesia">
         <h3 id="poesia">Poesia</h3>
         <div class="poema">
           <p>Névoa que abraça a serra ao amanhecer,</p>
@@ -109,6 +219,26 @@
           <p>Pedra mourisca, palácio real,</p>
           <p>história e magia em cada portal.</p>
         </div>
+      </section>
+
+      <section class="tela video-fundo">
+        <!-- Descarrega um vídeo do Pixabay e guarda-o em videos/sintra.mp4 -->
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="images/palacio_pena.jpg"
+        >
+          <source src="videos/sintra.mp4" type="video/mp4" />
+        </video>
+        <div class="conteudo">
+          <h3>Sintra em movimento</h3>
+        </div>
+      </section>
+
+      <section class="tela parallax">
+        <h3>Castelo dos Mouros</h3>
       </section>
     </main>
   </body>

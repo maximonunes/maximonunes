@@ -1,7 +1,6 @@
 
 body {
   margin: 0;
-  padding: 20px;
   background: #f8f9fa;
   font-family: "Times New Roman", Times, serif;
   color: #fff;
@@ -12,7 +11,7 @@ body {
   min-height: calc(100vh - 40px);
   display: grid;
   grid-template-rows: auto 1fr auto;
-  border: 2px solid #8a2be2;
+
 }
 
 

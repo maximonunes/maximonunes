@@ -1,0 +1,131 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* menu: sem marcadores nem sublinhados */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover { text-decoration: underline; }
+
+.hero, .projetos, .disciplina {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* ---- Herói ---- */
+.hero {
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("images/palacio_pena.jpg") center / cover no-repeat;
+  color: #fff;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 18%;
+  left: 8%;
+  max-width: 32rem;
+}
+
+.hero-text h1 {
+  font-size: 3.5vw;
+  margin: 0 0 0.5rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  background: #f5a623;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ---- Projetos ---- */
+.projetos { background: #e8f0e4; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 15rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Disciplina ---- */
+.disciplina { background: #f3e5d0; }
+
+.disciplina-conteudo {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.disciplina-conteudo > * { flex: 1; }
+.disciplina-conteudo img { max-width: 100%; }
+
+/* ---- Página de tutoriais ---- */
+.pagina-header {
+  background: #2f4f3f;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.tutoriais section { padding: 2rem; }
+.tutoriais section:nth-child(even) { background: #eef3ff; }
+
+.grelha-artigos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.grelha-artigos article { flex: 1 1 20rem; }
+
+.grelha-artigos iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+footer {
+  background: #2f4f3f;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+
+@media (max-width: 700px) {
+  .disciplina-conteudo { flex-direction: column; }
+  .hero-text h1 { font-size: 8vw; }
+  nav ul { flex-direction: column; align-items: center; gap: 0.5rem; }
+}
