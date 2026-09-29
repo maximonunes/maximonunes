@@ -47,7 +47,7 @@
         height: 80px;
         object-fit: cover;
         border-radius: 4px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
         transition:
           transform 0.3s,
           box-shadow 0.3s;
@@ -55,7 +55,7 @@
 
       .fotografias img:hover {
         transform: scale(1.25);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 50%);
       }
 
       /* ---- Fotografia emblemática com frase ---- */
@@ -77,7 +77,7 @@
         font-size: 5vw;
         font-weight: bold;
         color: #fff;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        text-shadow: 0 2px 10px rgb(0 0 0 / 80%);
       }
 
       /* ---- Vídeo YouTube ---- */
@@ -127,7 +127,7 @@
       .video-fundo .conteudo {
         position: relative;
         text-align: center;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        text-shadow: 0 2px 10px rgb(0 0 0 / 80%);
       }
 
       /* ---- Parallax ---- */
@@ -140,7 +140,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        text-shadow: 0 2px 10px rgb(0 0 0 / 80%);
       }
     </style>
   </head>
@@ -224,7 +224,7 @@
       <section class="tela video-fundo">
         <!-- Descarrega um vídeo do Pixabay e guarda-o em videos/sintra.mp4 -->
         <video
-          autoplay
+          id="video-fundo"
           muted
           loop
           playsinline
@@ -241,5 +241,9 @@
         <h3>Castelo dos Mouros</h3>
       </section>
     </main>
+
+    <script>
+      document.getElementById("video-fundo").play();
+    </script>
   </body>
 </html>

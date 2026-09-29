@@ -127,6 +127,7 @@ footer {
 @media (width <= 700px) {
   .disciplina-conteudo { flex-direction: column; }
   .hero-text h1 { font-size: 8vw; }
+
   nav ul {
     flex-direction: column;
     align-items: center;
