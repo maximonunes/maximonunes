@@ -104,6 +104,7 @@ nav a:hover {
 .disciplina-conteudo > * {
   flex: 1;
 }
+
 .disciplina-conteudo img {
   max-width: 100%;
 }
@@ -119,6 +120,7 @@ nav a:hover {
 .tutoriais section {
   padding: 2rem;
 }
+
 .tutoriais section:nth-child(even) {
   background: #eef3ff;
 }
@@ -150,6 +152,7 @@ footer {
   .disciplina-conteudo {
     flex-direction: column;
   }
+
   .hero-text h1 {
     font-size: 8vw;
   }
