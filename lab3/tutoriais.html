@@ -1,65 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutoriais</title>
-  <link rel="stylesheet" href="landing.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutoriais</title>
+    <link rel="stylesheet" href="landing.css" />
+  </head>
+  <body>
+    <header class="pagina-header">
+      <h1>Tutoriais</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#projetos">Projetos</a></li>
+          <li><a href="index.html#interfaces-web">Interfaces Web</a></li>
+          <li><a href="tutoriais.html">Tutoriais</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header class="pagina-header">
-    <h1>Tutoriais</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="index.html#projetos">Projetos</a></li>
-        <li><a href="index.html#interfaces-web">Interfaces Web</a></li>
-        <li><a href="tutoriais.html">Tutoriais</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main class="tutoriais">
+      <section id="videotutoriais">
+        <h2>Videotutoriais</h2>
+        <div class="grelha-artigos">
+          <!-- Em cada iframe, troca VIDEO_ID pelo id do teu vídeo (YouTube > Partilhar > Incorporar) -->
+          <article>
+            <h3>Seletores e a sua composição</h3>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Seletores e a sua composição"
+              allowfullscreen
+            ></iframe>
+          </article>
+          <article>
+            <h3>Flex</h3>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Flex"
+              allowfullscreen
+            ></iframe>
+          </article>
+          <article>
+            <h3>Grid (grade)</h3>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Grid"
+              allowfullscreen
+            ></iframe>
+          </article>
+          <article>
+            <h3>Responsividade com media queries</h3>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Media queries"
+              allowfullscreen
+            ></iframe>
+          </article>
+        </div>
+      </section>
 
-  <main class="tutoriais">
+      <section id="codepens">
+        <h2>CodePens</h2>
+        <div class="grelha-artigos">
+          <article>
+            <h3>Título do CodePen</h3>
+            <!-- CodePen: botão Embed (canto inferior direito) > copiar o código HTML > colar aqui -->
+          </article>
+        </div>
+      </section>
+    </main>
 
-    <section id="videotutoriais">
-      <h2>Videotutoriais</h2>
-      <div class="grelha-artigos">
-        <!-- Em cada iframe, troca VIDEO_ID pelo id do teu vídeo (YouTube > Partilhar > Incorporar) -->
-        <article>
-          <h3>Seletores e a sua composição</h3>
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Seletores e a sua composição" allowfullscreen></iframe>
-        </article>
-        <article>
-          <h3>Flex</h3>
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Flex" allowfullscreen></iframe>
-        </article>
-        <article>
-          <h3>Grid (grade)</h3>
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Grid" allowfullscreen></iframe>
-        </article>
-        <article>
-          <h3>Responsividade com media queries</h3>
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Media queries" allowfullscreen></iframe>
-        </article>
-      </div>
-    </section>
-
-    <section id="codepens">
-      <h2>CodePens</h2>
-      <div class="grelha-artigos">
-        <article>
-          <h3>Título do CodePen</h3>
-          <!-- CodePen: botão Embed (canto inferior direito) > copiar o código HTML > colar aqui -->
-        </article>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>DIW 2026</p>
-  </footer>
-
-</body>
+    <footer>
+      <p>DIW 2026</p>
+    </footer>
+  </body>
 </html>
