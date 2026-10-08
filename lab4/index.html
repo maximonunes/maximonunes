@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4 - Planeta Interativo</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="titulo">Planeta Interativo</h1>
+      <p id="subtitulo">Passa o rato, clica e descobre o que acontece!</p>
+      <a href="../index.html">&larr; Voltar à landing page</a>
+    </header>
+
+    <main>
+      <!-- Evento 1: click | Evento 2: dblclick -->
+      <section id="contador-secao">
+        <h2>Contador</h2>
+        <p>Cliques: <span id="contador">0</span></p>
+        <button id="btn-contar" onclick="contar()" ondblclick="reiniciar()">
+          Clica para contar (duplo clique reinicia)
+        </button>
+      </section>
+
+      <!-- Evento 3: mouseover | Evento 4: mouseout -->
+      <section id="imagem-secao">
+        <h2>A fotografia tímida</h2>
+        <img
+          id="foto"
+          src="images/fotografia.svg"
+          alt="Planeta com uma lua e estrelas"
+          onmouseover="destacarFoto()"
+          onmouseout="normalizarFoto()"
+        />
+        <p id="legenda">Passa o cursor por cima da imagem.</p>
+      </section>
+
+      <!-- Evento 5: mousemove -->
+      <section id="area-secao">
+        <h2>Zona de movimento</h2>
+        <div id="area" onmousemove="seguirRato(event)">
+          <p id="coordenadas">Move o rato aqui dentro.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Laboratório 4 · Desenvolvimento de Interfaces Web</p>
+    </footer>
+
+    <!-- HTML já carregado! -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
