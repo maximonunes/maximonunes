@@ -1,87 +1,92 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background: #0b1026;
-    color: #e8ecff;
-    line-height: 1.5;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #0b1026;
+  color: #e8ecff;
+  line-height: 1.5;
 }
 
-header, footer {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background: #151b3d;
+header,
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #151b3d;
 }
 
 header a {
-    color: #8fb3ff;
+  color: #8fb3ff;
 }
 
 main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1rem;
-    display: grid;
-    gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 section {
-    background: #1a2150;
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  background: #1a2150;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 35%);
 }
 
 button {
-    padding: 0.8rem 1.4rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    background: #5b7cff;
-    color: white;
-    cursor: pointer;
-    transition: transform 0.15s, background 0.2s;
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #5b7cff;
+  color: white;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    background 0.2s;
 }
 
 button:hover {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 #contador {
-    font-size: 2.5rem;
-    font-weight: bold;
-    display: inline-block;
-    transition: color 0.2s;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.2s;
 }
 
 #foto {
-    width: 100%;
-    max-width: 360px;
-    border-radius: 12px;
-    transition: transform 0.3s, filter 0.3s;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  transition:
+    transform 0.3s,
+    filter 0.3s;
 }
 
 #area {
-    height: 200px;
-    border: 2px dashed #5b7cff;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.1s;
+  height: 200px;
+  border: 2px dashed #5b7cff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s;
 }
 
 footer {
-    font-size: 0.9rem;
-    color: #aab4e8;
+  font-size: 0.9rem;
+  color: #aab4e8;
 }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.6rem;
-    }
+@media (width <= 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
 }

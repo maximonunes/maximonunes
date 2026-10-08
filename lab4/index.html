@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab 4 - Planeta Interativo</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
@@ -18,7 +18,12 @@
       <section id="contador-secao">
         <h2>Contador</h2>
         <p>Cliques: <span id="contador">0</span></p>
-        <button id="btn-contar" onclick="contar()" ondblclick="reiniciar()">
+        <button
+          type="button"
+          id="btn-contar"
+          onclick="contar()"
+          ondblclick="reiniciar()"
+        >
           Clica para contar (duplo clique reinicia)
         </button>
       </section>
