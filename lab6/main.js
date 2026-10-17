@@ -1,8 +1,7 @@
 
- // A. declaração de variáveis
+// A. declaração de variáveis
 
 const nodeInputNumero = document.querySelector("#registo input[type='number']");
-const nodeInputSubmit = document.querySelector("#registo input[type='submit']");
 const nodeForm = document.querySelector("#registo form");
 
 const nodeUlColecao = document.querySelector("#colecao ul");
@@ -31,12 +30,14 @@ function guardaCarta() {
         repetidos.push(numero);
         repetidos.sort((a, b) => a - b);
 
-        nodeMensagem.textContent = `O cromo ${numero} foi adicionado aos repetidos.`;
+        nodeMensagem.textContent =
+            `O cromo ${numero} foi adicionado aos repetidos.`;
     } else {
         colecao.push(numero);
         colecao.sort((a, b) => a - b);
 
-        nodeMensagem.textContent = `Cromo ${numero} registado com sucesso!`;
+        nodeMensagem.textContent =
+            `Cromo ${numero} registado com sucesso!`;
     }
 
     atualizaLista(colecao, nodeUlColecao);
@@ -50,10 +51,10 @@ function guardaCarta() {
 
 
 function atualizaLista(lista, nodeUl) {
-    // Limpar a lista HTML
+    // Limpar o conteúdo da lista
     nodeUl.innerHTML = "";
 
-    // Criar os elementos da lista
+    // Criar os elementos HTML
     lista.forEach((numero, indice) => {
         const nodeLi = document.createElement("li");
 
@@ -74,6 +75,11 @@ function atualizaLista(lista, nodeUl) {
     // Atualizar os contadores
     nodeTotalColecao.textContent = colecao.length;
     nodeTotalRepetidos.textContent = repetidos.length;
+
+    // Associar eventos aos botões de eliminar
+    if (nodeUl === nodeUlRepetidos) {
+        associaEventosEliminar();
+    }
 }
 
 
@@ -101,9 +107,10 @@ nodeForm.onsubmit = (event) => {
 };
 
 
-// Associar um evento a cada botão de eliminar
+// Associar eventos aos botões de eliminar
 function associaEventosEliminar() {
-    const botoesEliminar = nodeUlRepetidos.querySelectorAll("button");
+    const botoesEliminar =
+        nodeUlRepetidos.querySelectorAll("button");
 
     botoesEliminar.forEach((botao) => {
         botao.addEventListener("click", () => {
@@ -112,18 +119,6 @@ function associaEventosEliminar() {
         });
     });
 }
-
-
-// Atualizar a função de renderização para associar os botões
-const atualizaListaOriginal = atualizaLista;
-
-atualizaLista = function(lista, nodeUl) {
-    atualizaListaOriginal(lista, nodeUl);
-
-    if (nodeUl === nodeUlRepetidos) {
-        associaEventosEliminar();
-    }
-};
 
 
 // Mostrar os dados guardados ao abrir a página
