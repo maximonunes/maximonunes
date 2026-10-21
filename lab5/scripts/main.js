@@ -61,6 +61,6 @@ btnSubmit.addEventListener("click", () => {
 
   resultadoDados.textContent = `Olá, ${nome} tem ${idade} anos!`;
 
-  inputNome.value = '';
-  inputIdade.value = '';
+  inputNome.value = "";
+  inputIdade.value = "";
 });

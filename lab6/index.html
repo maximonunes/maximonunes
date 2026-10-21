@@ -1,53 +1,52 @@
-
 <!doctype html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coleção de Cromos</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Coleção de Cromos</h1>
-        <p>Organiza a tua coleção!</p>
+      <h1>Coleção de Cromos</h1>
+      <p>Organiza a tua coleção!</p>
     </header>
 
     <main>
-        <section id="colecao">
-            <h2>A minha coleção</h2>
-            <ul></ul>
-            <h3>Total de cromos: <span id="total-colecao">0</span></h3>
-        </section>
+      <section id="colecao">
+        <h2>A minha coleção</h2>
+        <ul></ul>
+        <h3>Total de cromos: <span id="total-colecao">0</span></h3>
+      </section>
 
-        <section id="secao-repetidos">
-            <h2>Cromos repetidos</h2>
-            <ul></ul>
-            <h3>Total de repetidos: <span id="total-repetidos">0</span></h3>
-        </section>
+      <section id="secao-repetidos">
+        <h2>Cromos repetidos</h2>
+        <ul></ul>
+        <h3>Total de repetidos: <span id="total-repetidos">0</span></h3>
+      </section>
 
-        <section id="registo">
-            <h2>Registar novo cromo</h2>
-            <form>
-                <label for="numero">Número do cromo</label>
-                <input
-                    id="numero"
-                    type="number"
-                    min="1"
-                    step="1"
-                    placeholder="Introduz o número"
-                    required
-                >
-                <button type="submit">Registar Cromo</button>
-            </form>
-            <p id="mensagem" aria-live="polite"></p>
-        </section>
+      <section id="registo">
+        <h2>Registar novo cromo</h2>
+        <form>
+          <label for="numero">Número do cromo</label>
+          <input
+            id="numero"
+            type="number"
+            min="1"
+            step="1"
+            placeholder="Introduz o número"
+            required
+          />
+          <button type="submit">Registar Cromo</button>
+        </form>
+        <p id="mensagem" aria-live="polite"></p>
+      </section>
     </main>
 
     <footer>
-        <p>2026, ULusófona</p>
+      <p>2026, ULusófona</p>
     </footer>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
