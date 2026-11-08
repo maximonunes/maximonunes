@@ -159,29 +159,31 @@ function comprar() {
     products: cesto.map((p) => p.id),
     student: estudanteEl.checked,
     coupon: cupaoEl.value.trim(),
-    name: "" // confirma no OpenAPI se este campo é necessário
+    name: "", // confirma no OpenAPI se este campo é necessário
   };
 
   fetch(`${API}/buy`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(dados)
+    body: JSON.stringify(dados),
   })
     .then((res) => {
       if (!res.ok) {
         // tenta ler a mensagem de erro enviada pela API
         return res.json().then(
-          (erro) => { throw new Error(erro.error || erro.message || `Erro ${res.status}`); },
-          () => { throw new Error(`Erro ${res.status}`); }
+          (erro) => {
+            throw new Error(erro.error || erro.message || `Erro ${res.status}`);
+          },
+          () => {
+            throw new Error(`Erro ${res.status}`);
+          },
         );
       }
       return res.json();
     })
     .then((resposta) => {
-      valorFinalEl.textContent =
-        `Valor final a pagar (com eventuais descontos): ${resposta.totalCost} €`;
-      referenciaEl.textContent =
-        `Referência de pagamento: ${resposta.reference}`;
+      valorFinalEl.textContent = `Valor final a pagar (com eventuais descontos): ${resposta.totalCost} €`;
+      referenciaEl.textContent = `Referência de pagamento: ${resposta.reference}`;
     })
     .catch((erro) => {
       valorFinalEl.textContent = `Não foi possível concluir a compra: ${erro.message}`;
