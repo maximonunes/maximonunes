@@ -1,0 +1,66 @@
+body {
+  background: url("https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png") center / cover fixed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: #5a0055;
+  padding: 12px 24px;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+#controlos {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+#controlos label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+#mensagem-produtos {
+  text-align: center;
+  font-weight: bold;
+}
+
+#cesto {
+  background: #800080;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 32px;
+  color: white;
+}
+
+#checkout {
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#checkout button {
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#valor-final {
+  font-weight: bold;
+}
