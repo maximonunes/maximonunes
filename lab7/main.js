@@ -1,4 +1,4 @@
-// A. Estado e variáveis com referência de elementos do DOM
+/* global produtos */
 const CHAVE = "produtos-selecionados";
 
 if (!localStorage.getItem(CHAVE)) {

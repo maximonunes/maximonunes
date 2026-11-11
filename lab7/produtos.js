@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars -- usado em main.js através do <script> do HTML */
 const produtos = [
   {
     id: 1,
